@@ -229,21 +229,9 @@ class GDCheckbox: UIControl {
     
     //MARK: - touch events
     internal override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        return true
-    }
-    
-    internal override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        return true
-    }
-    
-    internal override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        guard let _ = touch?.location(in: self) else {
-            return
-        }
-        
         isOn = !isOn
         sendActions(for: [.valueChanged])
+
+        return true
     }
-    
-    
 }

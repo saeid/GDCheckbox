@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3600EA9D1E27CAEE002FCF52 /* GDCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3600EA9C1E27CAEE002FCF52 /* GDCheckbox.swift */; };
+		362098141E79CD5300311DEE /* GDCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362098131E79CD5300311DEE /* GDCheckbox.swift */; };
 		3665AB3E1E27C1F500EF9F6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665AB3D1E27C1F500EF9F6E /* AppDelegate.swift */; };
 		3665AB401E27C1F500EF9F6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665AB3F1E27C1F500EF9F6E /* ViewController.swift */; };
 		3665AB431E27C1F500EF9F6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3665AB411E27C1F500EF9F6E /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3600EA9C1E27CAEE002FCF52 /* GDCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCheckbox.swift; sourceTree = "<group>"; };
+		362098131E79CD5300311DEE /* GDCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCheckbox.swift; sourceTree = "<group>"; };
 		3665AB3A1E27C1F500EF9F6E /* CheckBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3665AB3D1E27C1F500EF9F6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3665AB3F1E27C1F500EF9F6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,12 +37,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3600EA9B1E27CAD6002FCF52 /* GDCheckbox */ = {
+		362098121E79CD5300311DEE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3600EA9C1E27CAEE002FCF52 /* GDCheckbox.swift */,
+				362098131E79CD5300311DEE /* GDCheckbox.swift */,
 			);
-			name = GDCheckbox;
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 		3665AB311E27C1F500EF9F6E = {
@@ -64,7 +65,7 @@
 		3665AB3C1E27C1F500EF9F6E /* CheckBox */ = {
 			isa = PBXGroup;
 			children = (
-				3600EA9B1E27CAD6002FCF52 /* GDCheckbox */,
+				362098121E79CD5300311DEE /* Source */,
 				3665AB3D1E27C1F500EF9F6E /* AppDelegate.swift */,
 				3665AB3F1E27C1F500EF9F6E /* ViewController.swift */,
 				3665AB411E27C1F500EF9F6E /* Main.storyboard */,
@@ -150,7 +151,7 @@
 			files = (
 				3665AB401E27C1F500EF9F6E /* ViewController.swift in Sources */,
 				3665AB3E1E27C1F500EF9F6E /* AppDelegate.swift in Sources */,
-				3600EA9D1E27CAEE002FCF52 /* GDCheckbox.swift in Sources */,
+				362098141E79CD5300311DEE /* GDCheckbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
