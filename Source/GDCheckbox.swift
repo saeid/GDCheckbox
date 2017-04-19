@@ -51,7 +51,6 @@ class GDCheckbox: UIControl {
     @IBInspectable
     open var shouldAnimate: Bool = false{
         didSet{
-            
         }
     }
     
@@ -142,7 +141,7 @@ class GDCheckbox: UIControl {
         }else if isRadiobox{
             let unit = checkFrame.width / 4
             
-            path.addArc(withCenter: CGPoint(x: x + (2 * unit), y: y + (2 * unit)), radius: containerFrame.width / 3 - checkWidth, startAngle: 0.0, endAngle: CGFloat(2 * M_PI), clockwise: true)
+            path.addArc(withCenter: CGPoint(x: x + (2 * unit), y: y + (2 * unit)), radius: containerFrame.width / 3 - checkWidth, startAngle: 0.0, endAngle: CGFloat(Double.pi * 2), clockwise: true)
         }else{
             let unit = checkFrame.width / 33
             
