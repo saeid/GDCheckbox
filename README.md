@@ -1,10 +1,7 @@
 # GDCheckbox
-Checkbox and Radio Button.
-========
 
-An easy to use custom checkbox/radio button component for iOS.
-with support of IBDesign Inspector.
 
+An easy to use custom checkbox/radio button component for iOS, with support of IBDesign Inspector.
 
 updated to swift 3
 
@@ -13,7 +10,9 @@ updated to swift 3
 
 # Requirements
 xcode 7+
+
 swift 3.1
+
 iOS 8+
 
 
@@ -28,8 +27,6 @@ Soon!
 
 
 # How to use
-Getting Started
-------
 ```
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +53,3 @@ Getting Started
         // do some cool stuff
     }
 ```
-
-
-License
-------
-
-Copyright (c) 2016 Stefan Godoroja. iCheckbox is released under the [MIT License](https://raw.githubusercontent.com/mancunianetz/iCheckbox/master/LICENSE).
