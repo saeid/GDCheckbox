@@ -82,7 +82,6 @@ class GDCheckbox: UIControl {
         }
     }
     
-    
     //MARK: - internal properties
     fileprivate var containerLayer = CAShapeLayer()
     fileprivate var checkLayer = CAShapeLayer()
@@ -170,40 +169,42 @@ class GDCheckbox: UIControl {
     }
     
     fileprivate func drawColors(){
-        containerLayer.strokeColor = containerColor.cgColor
-        
-        if isOn{
-            containerLayer.fillColor = shouldFillContainer ? containerColor.cgColor : UIColor.clear.cgColor
+        DispatchQueue.main.async {
+            self.containerLayer.strokeColor = self.containerColor.cgColor
             
-            if shouldAnimate && !isRadiobox && !isSquare{
-                checkLayer.strokeColor = checkColor.cgColor
+            if self.isOn{
+                self.containerLayer.fillColor = self.shouldFillContainer ? self.containerColor.cgColor : UIColor.clear.cgColor
                 
-                let anim = CABasicAnimation(keyPath: "strokeEnd")
-                anim.duration = 0.2
-                anim.fromValue = 0.0
-                anim.toValue = 1.0
-                
-                checkLayer.add(anim, forKey: "stroke")
-            }else{
-                if isSquare{
-                    checkLayer.fillColor = checkColor.cgColor
-                }else if isRadiobox{
-                    checkLayer.fillColor = checkColor.cgColor
+                if self.shouldAnimate && !self.isRadiobox && !self.isSquare{
+                    self.checkLayer.strokeColor = self.checkColor.cgColor
+                    
+                    let anim = CABasicAnimation(keyPath: "strokeEnd")
+                    anim.duration = 0.2
+                    anim.fromValue = 0.0
+                    anim.toValue = 1.0
+                    
+                    self.checkLayer.add(anim, forKey: "stroke")
                 }else{
-                    checkLayer.strokeColor = checkColor.cgColor
+                    if self.isSquare{
+                        self.checkLayer.fillColor = self.checkColor.cgColor
+                    }else if self.isRadiobox{
+                        self.checkLayer.fillColor = self.checkColor.cgColor
+                    }else{
+                        self.checkLayer.strokeColor = self.checkColor.cgColor
+                    }
+                }
+            }else{
+                self.containerLayer.fillColor = UIColor.clear.cgColor
+                if self.isSquare{
+                    self.checkLayer.fillColor = UIColor.clear.cgColor
+                }else if self.isRadiobox{
+                    self.checkLayer.fillColor = UIColor.clear.cgColor
+                }else{
+                    self.checkLayer.strokeColor = UIColor.clear.cgColor
                 }
             }
-        }else{
-            containerLayer.fillColor = UIColor.clear.cgColor
-            if isSquare{
-                checkLayer.fillColor = UIColor.clear.cgColor
-            }else if isRadiobox{
-                checkLayer.fillColor = UIColor.clear.cgColor
-            }else{
-                checkLayer.strokeColor = UIColor.clear.cgColor
-            }
+            self.setNeedsDisplay()
         }
-        self.setNeedsDisplay()
     }
     
     //MARK: - initialization
@@ -231,7 +232,7 @@ class GDCheckbox: UIControl {
     internal override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         isOn = !isOn
         sendActions(for: [.valueChanged])
-
+        
         return true
     }
 }
