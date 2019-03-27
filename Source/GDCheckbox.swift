@@ -165,7 +165,7 @@ class GDCheckbox: UIControl {
         checkLayer.frame = bounds
         checkLayer.lineWidth = checkWidth
         checkLayer.path = checkPath.cgPath
-        checkLayer.lineJoin = "round"
+        checkLayer.lineJoin = CAShapeLayerLineJoin.round
     }
     
     fileprivate func drawColors(){

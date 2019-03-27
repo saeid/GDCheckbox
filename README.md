@@ -7,10 +7,9 @@ An easy to use custom checkbox/radio button component for iOS, with support of I
 
 
 # Requirements
--Xcode 7+
--Swift 4
--iOS 8+
-
+- Xcode 7+
+- Swift 4
+- iOS 8+
 
 # Installation
 Install manually
