@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage        = "https://github.com/saeid/GDCheckbox"
   s.screenshots     = "https://github.com/saeid/GDCheckbox/blob/master/screenshots/example.gif?raw=true"
   s.license         = { :type => 'MIT', :file => 'LICENSE' } 
-  s.authors         = { "saeid" => "saeid.basirnia@gmail.com" }
+  s.authors         = { "saeid" => "saeid.basirniaa@gmail.com" }
   s.source          = { :git => "https://github.com/saeid/GDCheckbox.git", :tag => s.version }
   s.swift_version   = '5.0'
 
