@@ -10,7 +10,7 @@
 import UIKit
 
 @IBDesignable
-public class GDCheckbox: UIControl {
+open class GDCheckbox: UIControl {
     //MARK: - public properties
     
     @IBInspectable
@@ -152,7 +152,7 @@ public class GDCheckbox: UIControl {
     }
     
     //MARK: - layouts
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         drawLayers()
     }
@@ -229,7 +229,7 @@ public class GDCheckbox: UIControl {
     }
     
     //MARK: - touch events
-    internal override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    open override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         isOn = !isOn
         sendActions(for: [.valueChanged])
         

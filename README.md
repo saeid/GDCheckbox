@@ -26,7 +26,7 @@ end
     pod install
 
 
-Install manually
+## Manually
 ------
 Drag `GDCheckbox.swift` to your project and use!
 
