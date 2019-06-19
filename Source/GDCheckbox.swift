@@ -10,7 +10,7 @@
 import UIKit
 
 @IBDesignable
-class GDCheckbox: UIControl {
+public class GDCheckbox: UIControl {
     //MARK: - public properties
     
     @IBInspectable
