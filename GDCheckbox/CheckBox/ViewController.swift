@@ -9,51 +9,57 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var statusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let checkbox: GDCheckbox = GDCheckbox()
+        let checkbox: GDCheckbox = GDCheckbox()
         
-        /// check mark color
-//        checkbox.checkColor = UIColor.red
+        /// Checkmark color
+        //        checkbox.checkColor = UIColor.red
         
-        /// check mark line width
-//        checkbox.checkWidth = 3.0
+        /// Checkmark line width
+        //        checkbox.checkWidth = 3.0
         
-        /// container border line color
-//        checkbox.containerColor = UIColor.blue
+        /// Container border line color
+        //        checkbox.containerColor = UIColor.blue
         
-        /// container border line width
-//        checkbox.containerWidth = 5.0
+        /// Container border line width
+        //        checkbox.containerWidth = 5.0
         
-        /// make checkbox container circular
-//        checkbox.isCircular = true
+        /// Make checkbox container circular
+        //        checkbox.isCircular = true
         
-        /// turn initial checkbox state to on
-//        checkbox.isOn = false
+        /// Turn initial checkbox state to on
+        //        checkbox.isOn = false
         
-        /// convert to radio button - circular shape with circular fill
-//        checkbox.isRadiobox = false
+        /// Radio button mode
+        //        checkbox.isRadiobox = false
         
-        /// fill the container with a square
-//        checkbox.isSquare = false
+        /// Square/Circular mode
+        //        checkbox.isSquare = false
         
-        /// animate the checkbox check mark
-//        checkbox.shouldAnimate = false
+        /// Animate the checkbox check mark
+        //        checkbox.shouldAnimate = false
         
-        /// fill container background color with containerColor
-//        checkbox.shouldFillContainer = false
+        /// Fill container when it's checked
+        //        checkbox.shouldFillContainer = false
         
-//        self.view.addSubview(checkbox)
+        /// Container background
+//        checkbox.baseColor == UIColor.green
+        
+        /// Animation duration -- default is 0.2 seconds
+//        checkbox.animationDuration = 1
+        
+        //        self.view.addSubview(checkbox)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     @IBAction func onCheckBoxPress(_ sender: GDCheckbox) {
         let state = sender.isOn ? "ON" : "OFF"
         let type = sender.isRadiobox ? "RadioBox" : "CheckBox"
@@ -68,8 +74,8 @@ class ViewController: UIViewController {
             self.statusLabel.text = "\(type) 4 \(state)"
         }
         
-
+        
     }
-
+    
 }
 

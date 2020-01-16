@@ -9,7 +9,7 @@ An easy to use custom checkbox/radio button component for iOS, with support of I
 # Requirements
 - Xcode 10+
 - Swift 5
-- iOS 8+
+- iOS 9+
 
 # Installation
 ## Cocoapods
@@ -39,6 +39,8 @@ Drag `GDCheckbox.swift` to your project and use!
 
         let checkbox: GDCheckbox = GDCheckbox()
 
+        checkbox.baseColor = UIColor.white
+        checkbox.animationDuration = 1.0
         checkbox.checkColor = UIColor.red
         checkbox.checkWidth = 3.0
         checkbox.containerColor = UIColor.blue
@@ -55,6 +57,6 @@ Drag `GDCheckbox.swift` to your project and use!
 
     @IBAction func onCheckBoxPress(_ sender: GDCheckbox) {
         let state = sender.isOn ? "ON" : "OFF"
-        // Do some cool stuff
+        // Trigger action
     }
 ```
