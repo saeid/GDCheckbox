@@ -1,6 +1,6 @@
 # GDCheckbox
 
-An easy to use custom checkbox/radio button component for iOS, with support of Attributes inspector.
+An easy to use CheckBox/Radio button component for iOS, with Attributes inspector support.
 
 
 ![untitled](https://cloud.githubusercontent.com/assets/9967486/21909175/03d46ab6-d92c-11e6-86d6-216c1b18e2e0.gif)
@@ -26,7 +26,6 @@ end
 
 
 ## Manually
-------
 Drag `GDCheckbox.swift` to your project!
 
 
