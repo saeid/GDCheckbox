@@ -1,6 +1,6 @@
 # GDCheckbox
 
-An easy to use custom checkbox/radio button component for iOS, with support of IBDesign Inspector.
+An easy to use custom checkbox/radio button component for iOS, with support of Attributes inspector.
 
 
 ![untitled](https://cloud.githubusercontent.com/assets/9967486/21909175/03d46ab6-d92c-11e6-86d6-216c1b18e2e0.gif)
@@ -22,13 +22,12 @@ target '<Your Target Name>' do
     pod 'GDCheckbox'
 end
 ```
-    pod update
     pod install
 
 
 ## Manually
 ------
-Drag `GDCheckbox.swift` to your project and use!
+Drag `GDCheckbox.swift` to your project!
 
 
 # How to use
