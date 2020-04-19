@@ -32,30 +32,53 @@ Drag `GDCheckbox.swift` to your project!
 
 # How to use
 ```swift
-    override func viewDidLoad() {
-        super.viewDidLoad()
+override func viewDidLoad() {
+    super.viewDidLoad()
 
 
-        let checkbox: GDCheckbox = GDCheckbox()
+    let checkbox: GDCheckbox = GDCheckbox()
 
-        checkbox.baseColor = UIColor.white
-        checkbox.animationDuration = 1.0
-        checkbox.checkColor = UIColor.red
-        checkbox.checkWidth = 3.0
-        checkbox.containerColor = UIColor.blue
-        checkbox.containerWidth = 5.0
-        checkbox.isCircular = true
-        checkbox.isOn = false
-        checkbox.isRadiobox = false
-        checkbox.isSquare = false
-        checkbox.shouldAnimate = false
-        checkbox.shouldFillContainer = false
-        
-        self.view.addSubview(checkbox)
-    }
+    // Background color of the box
+    checkbox.baseColor = UIColor.white
 
-    @IBAction func onCheckBoxPress(_ sender: GDCheckbox) {
-        let state = sender.isOn ? "ON" : "OFF"
-        // Trigger action
-    }
+    // In case of check box, determine the animation duration of the check mark
+    checkbox.animationDuration = 1.0
+
+    // Determine if check mark should fill with animation
+    checkbox.shouldAnimate = false
+
+    // Color of the check mark / fill area -- no matter if isCurcular is on or off
+    checkbox.checkColor = UIColor.red
+
+    // Width of the check mark / fill area -- no matter if isCurcular is on or off
+    checkbox.checkWidth = 3.0
+
+    // Color of container border. If shouldFillContainer is set to true, container background also will be override with this color when CheckBox / Radio Button is selected.
+    checkbox.containerColor = UIColor.blue
+
+    // Determine if container should be filled when selected
+    // Note: if set to true, it will override `baseColor` when control is selected
+    checkbox.shouldFillContainer = false
+
+    // Border width of container view
+    checkbox.containerWidth = 5.0
+
+    // Determine if it's a check box or a radio button
+    checkbox.isRadioButton = false
+    
+    // Determine container shpae type for selected state
+    // For CheckBox -> Check mark when true or square when false
+    // For RadioButton -> Check mark when true or circle when false
+    checkbox.showCheckMark = false
+
+    // Set default state of the control
+    checkbox.isOn = false
+    
+    self.view.addSubview(checkbox)
+}
+
+@IBAction func onCheckBoxPress(_ sender: GDCheckbox) {
+    let state = sender.isOn ? "ON" : "OFF"
+    // Trigger action
+}
 ```
